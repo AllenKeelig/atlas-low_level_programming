@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#pop
+gcc -E "$CFILE" -o c
