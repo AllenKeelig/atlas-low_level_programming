@@ -1,3 +1,2 @@
-#!/usr/bin/env bash
-#pop
+#!/bin/bash
 gcc -E "$CFILE" -o c
