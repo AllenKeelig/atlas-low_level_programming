@@ -7,17 +7,15 @@
  */
 int main(void)
 {
-	char ch;
+	int digit;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	for (digit = 0; digit <= 9; digit++)
 	{
-		if (ch != 'e' && ch != 'q')
-		{
-			putchar(ch);
-		}
+		putchar(digit + '0');
 	}
 
 	putchar('\n');
 
 	return (0);
 }
+
