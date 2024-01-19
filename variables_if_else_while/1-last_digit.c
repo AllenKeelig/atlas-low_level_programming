@@ -12,12 +12,12 @@
  */
 int main(void)
 {
-    int n, lastDigit;  // Corrected the variable name 'lastdigit' to 'lastDigit'
-    srand(time(0));    // Corrected the colon to a semicolon
+    int n, lastDigit;  /* Corrected the comment style from // to /* */
+    srand(time(0));     // Corrected the colon to a semicolon
 
     n = rand() - RAND_MAX / 2;
+    lastDigit = n % 10;  // Initialize lastDigit before using it
     printf("Last digit of %d is %d and is ", n, lastDigit);  // Added the missing '%d' for lastDigit
-    lastDigit = n % 10;
 
     if (lastDigit > 5)
     {
