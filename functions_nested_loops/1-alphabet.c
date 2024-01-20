@@ -1,32 +1,36 @@
 #include <stdio.h>
 
-void _putchar(char c);
+/* Prototype for _putchar */
+int _putchar(char c);
 
-/**
- * print_alphabet - Prints the alphabet in lowercase followed by a new line
- */
+/* Function to print the alphabet in lowercase */
 void print_alphabet(void);
 
 int main(void)
 {
+	/* Call the function to print the alphabet */
 	print_alphabet();
-	return (0);
+
+	return 0;
 }
 
-void _putchar(char c)
+/* Implementation of _putchar (assuming it's defined elsewhere in your code) */
+int _putchar(char c)
 {
-	putchar(c);
+	return putchar(c);
 }
 
+/* Function to print the alphabet in lowercase */
 void print_alphabet(void)
 {
-	char letter = 'a';
+	char letter;
 
-	while (letter <= 'z')
+	for (letter = 'a'; letter <= 'z'; letter++)
 	{
+		/* Use _putchar to print each letter */
 		_putchar(letter);
-		letter++;
 	}
 
+	/* Print a new line after the alphabet */
 	_putchar('\n');
 }
