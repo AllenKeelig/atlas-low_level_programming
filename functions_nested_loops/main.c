@@ -1,7 +1,7 @@
-/* Function prototype */
-void print_alphabet(void);
+/* main.c */
+#include "main.h"
 
-int main() {
+int main(void) {
     /* Call the function to print the alphabet */
     print_alphabet();
 

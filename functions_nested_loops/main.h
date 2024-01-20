@@ -1,4 +1,5 @@
 /* main.h */
-/* Function prototype */
+/* Function prototypes */
 void print_alphabet(void);
+int _putchar(char c);
 
