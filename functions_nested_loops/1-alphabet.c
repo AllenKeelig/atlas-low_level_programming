@@ -1,4 +1,5 @@
-#include <unistd.h>
+#include "main.c"
+#include "_putchar.c"
 #include "main.h"
 /* Function prototype */
 void print_alphabet(void);
