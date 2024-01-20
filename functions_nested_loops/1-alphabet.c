@@ -1,13 +1,29 @@
-#include "_putchar.c"
+#include <unistd.h>
 
-/* Function prototype for print_alphabet */
+/* Function prototype */
 void print_alphabet(void);
 
-int main(void)
-{
-	/* Call the function to print the alphabet */
-	print_alphabet();
+/* Custom putchar function */
+int _putchar(char c) {
+    return write(1, &c, 1);
+}
 
-	return 0;
+/* Function definition */
+void print_alphabet(void) {
+    char letter = 'a';
+
+    while (letter <= 'z') {
+        _putchar(letter);
+        letter++;
+    }
+
+    _putchar('\n');
+}
+
+int main() {
+    /* Call the function to print the alphabet */
+    print_alphabet();
+
+    return 0;
 }
 
