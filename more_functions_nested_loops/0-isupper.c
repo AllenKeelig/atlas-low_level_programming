@@ -1,26 +1,23 @@
 #include <stdio.h>
-#include "main.h"
 
-/**
- * _isdigit - Checks if a character is a digit (0 through 9).
- * @c: The character to be checked.
- *
- * Return: 1 if c is a digit, 0 otherwise.
- */
-int _isdigit(int c)
-{
-    return (c >= '0' && c <= '9') ? 1 : 0;
+int _isupper(int c) {
+    // Check if the character is uppercase
+    if (c >= 'A' && c <= 'Z') {
+        return 1; // Uppercase character
+    } else {
+        return 0; // Not an uppercase character
+    }
 }
 
-/**
- * main - Entry point of the program.
- *
- * Return: Always 0 (success).
- */
-int main(void)
-{
-    printf("%d\n", _isdigit('5'));
-    printf("%d\n", _isdigit('a'));
+int main() {
+    // Example usage
+    char testChar = 'A';
+    
+    if (_isupper(testChar)) {
+        printf("%c is an uppercase character\n", testChar);
+    } else {
+        printf("%c is not an uppercase character\n", testChar);
+    }
 
     return 0;
 }
