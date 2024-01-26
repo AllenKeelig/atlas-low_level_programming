@@ -13,10 +13,10 @@ void print_diagonal(int n)
 	}
 
 	int spaces = 0;
+	int i; 
 
 	while (n > 0)
 	{
-		int i;  // Declare 'i' outside the for loop in C90
 		/* Print leading spaces */
 		for (i = 0; i < spaces; i++)
 			_putchar('\t');
