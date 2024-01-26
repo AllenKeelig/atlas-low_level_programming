@@ -16,8 +16,9 @@ void print_diagonal(int n)
 
 	while (n > 0)
 	{
+		int i;  // Declare 'i' outside the for loop in C90
 		/* Print leading spaces */
-		for (int i = 0; i < spaces; i++)
+		for (i = 0; i < spaces; i++)
 			_putchar('\t');
 
 		/* Print '\' character */
