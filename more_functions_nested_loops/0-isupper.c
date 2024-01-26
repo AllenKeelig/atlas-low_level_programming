@@ -13,21 +13,3 @@ int _isupper(int c)
 	else
 		return 0;
 }
-
-/**
- * main - example usage of _isupper function
- *
- * Return: Always 0
- */
-int main(void)
-{
-	char testChar = 'A';
-
-	if (_isupper(testChar))
-		printf("%c is an uppercase character\n", testChar);
-	else
-		printf("%c is not an uppercase character\n", testChar);
-
-	return 0;
-}
-
