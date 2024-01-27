@@ -12,7 +12,7 @@ void puts_half(char *str)
 	{
 		length = length - 1;
 	}
-	size_t 2half = length / 2;
-	printf("%s\n", str + 2half);
+	size_t half = length / 2;
+	printf("%s\n", str + half);
 	putchar('\n');
 }
