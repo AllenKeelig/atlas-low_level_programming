@@ -34,6 +34,10 @@ void fizz_buzz(void)
 	}
 	printf("\n");
 }
+/**
+ * main - its fucking main betty
+ */
+
 int main(void)
 {
 	fizz_buzz();
