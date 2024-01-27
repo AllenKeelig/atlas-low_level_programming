@@ -13,6 +13,6 @@ void puts_half(char *str)
 		length = length - 1;
 	}
 	length = length / 2;
-	printf("%s\n", str + half);
+	printf("%s\n", str + length);
 	putchar('\n');
 }
