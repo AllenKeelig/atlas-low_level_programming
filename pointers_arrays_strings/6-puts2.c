@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  * puts2 - Prints every other character of a string, starting with the first
@@ -10,19 +9,16 @@
  */
 void puts2(char *str)
 {
-	size_t i = 0;
+    unsigned int i = 0;
 
-	if (str == NULL)
-		return; /* Handle NULL pointer gracefully */
+    while (str[i] != '\0')
+    {
+        /* Print characters at even indices */
+        _putchar(str[i]);
+        i += 2;
+    }
 
-	while (str[i] != '\0')
-	{
-		/* Print characters at even indices */
-		_putchar(str[i]);
-		i += 2;
-	}
-
-	/* Print a new line at the end */
-	_putchar('\n');
+    /* Print a new line at the end */
+    _putchar('\n');
 }
 
