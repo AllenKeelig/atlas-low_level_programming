@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * fizz_buzz - fizzbuzz interview test
@@ -10,19 +11,19 @@ void fizz_buzz(void)
 	{
 		if (digit % 3 == 0 && digit % 5 == 0)
 		{
-			printf('fizzbuzz ')
+			printf("fizzbuzz ");
 		}
 		else if (digit % 3 == 0)
 		{
-			printf('fizz ')
+			printf("fizz ");
 		}
 		else if (digit % 5 == 0)
 		{
-			printf('buzz ')
+			printf("buzz ");
 		}
 		else
 		{
-			_putchar("%d ")
+			_putchar("%d ");
 		}
 	}
 	done
