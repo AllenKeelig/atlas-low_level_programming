@@ -2,14 +2,14 @@
 
 int atoi(const char *str) {
     int result = 0;
-    int sign = 1; // 1 for positive, -1 for negative
+    int sign = 1; /* 1 for positive, -1 for negative */
 
-    // Skip leading whitespaces
+    /* Skip leading whitespaces */
     while (*str == ' ' || (*str >= '\t' && *str <= '\r')) {
         str++;
     }
 
-    // Check for the sign
+    /* Check for the sign */
     if (*str == '-') {
         sign = -1;
         str++;
@@ -17,7 +17,7 @@ int atoi(const char *str) {
         str++;
     }
 
-    // Process digits
+    /* Process digits */
     while (*str >= '0' && *str <= '9') {
         result = result * 10 + (*str - '0');
         str++;
@@ -26,4 +26,12 @@ int atoi(const char *str) {
     return result * sign;
 }
 
+int main() {
+    const char *str = "12345";
+    int num = atoi(str);
+
+    printf("Converted number: %d\n", num);
+
+    return 0;
+}
 
