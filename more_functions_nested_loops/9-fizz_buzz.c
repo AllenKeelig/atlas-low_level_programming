@@ -26,5 +26,4 @@ void fizz_buzz(void)
 			printf("%d ", digit);
 		}
 	}
-	done
 }
