@@ -9,17 +9,17 @@
  */
 void puts2(char *str)
 {
-    unsigned int i = 0;
-    unsigned int limit = 446; /* Adjust this limit as needed */
+	unsigned int i = 0;
+	unsigned int limit = 446; /* Adjust this limit as needed */
 
-    while (str[i] != '\0' && i < limit)
-    {
-        /* Print characters at even indices */
-        _putchar(str[i]);
-        i += 2;
-    }
+	while (str[i] != '\0' && i < limit)
+	{
+		/* Print characters at even indices */
+		_putchar(str[i]);
+		i += 2;
+	}
 
-    /* Print a new line at the end */
-    _putchar('\n');
+	/* Print a new line at the end */
+	_putchar('\n');
 }
 
