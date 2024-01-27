@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_array - Prints n elements of an array of integers, followed by a newline.
+ * print_array - Prints n elements of an array of integers, followed by a newl
  * @a: Pointer to the array of integers.
  * @n: Number of elements to print.
  *
@@ -13,7 +13,8 @@ void print_array(int *a, int n)
 {
 	int i;
 
-	for (i = 0; i < n; i++) {
+	for (i = 0; i < n; i++) 
+	{
 		printf("%d", a[i]);
 
 		if (i < n - 1)
