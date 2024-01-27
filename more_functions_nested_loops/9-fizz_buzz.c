@@ -23,7 +23,7 @@ void fizz_buzz(void)
 		}
 		else
 		{
-			_putchar("%d ");
+			printf("%d ", digit);
 		}
 	}
 	done
