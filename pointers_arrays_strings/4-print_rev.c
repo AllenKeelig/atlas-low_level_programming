@@ -5,7 +5,7 @@
  * @s: Pointer to the input string
  *
  * Description: This function calculates the length of the input string,
- *              then prints the characters in reverse order followed by a new 
+ *              then prints the characters in reverse order followed by a ne. 
  */
 void print_rev(char *s)
 {
