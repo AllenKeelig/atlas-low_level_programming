@@ -36,6 +36,8 @@ void fizz_buzz(void)
 }
 /**
  * main - its fucking main betty
+ *
+ * return 0 SUCCESS
  */
 
 int main(void)
