@@ -13,25 +13,22 @@ void fizz_buzz(void)
 	{
 		if (digit % 3 == 0 && digit % 5 == 0)
 		{
-			printf("FizzBuzz");
+			printf("FizzBuzz ");
 		}
 		else if (digit % 3 == 0)
 		{
-			printf("Fizz");
+			printf("Fizz ");
 		}
 		else if (digit % 5 == 0)
 		{
-			printf("Buzz");
+			printf("Buzz ");
 		}
 		else
 		{
-			printf("%d", digit);
-		}
-		if (digit < 100)
-		{
-			printf(" ");
+			printf("%d ", digit);
 		}
 	}
+	printf("\n");
 }
 int main(void)
 {
