@@ -26,12 +26,3 @@ int atoi(const char *str) {
     return result * sign;
 }
 
-int main() {
-    const char *str = "12345";
-    int num = atoi(str);
-
-    printf("Converted number: %d\n", num);
-
-    return 0;
-}
-
