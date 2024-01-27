@@ -7,7 +7,7 @@ void fizz_buzz(void)
 {
 	int digit;
 
-	for (digit=0; digit <= 100; digit++)
+	for (digit=1; digit <= 100; digit++)
 	{
 		if (digit % 3 == 0 && digit % 5 == 0)
 		{
@@ -26,4 +26,9 @@ void fizz_buzz(void)
 			printf("%d ", digit);
 		}
 	}
+}
+int main(void)
+{
+	fizz_buzz();
+	return 0;
 }
