@@ -19,6 +19,6 @@ int _strlen(char *s)
 	}
 
 	/* Return the total length of the string */
-	return length;
+	return (length);
 }
 
