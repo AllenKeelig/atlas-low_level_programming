@@ -29,7 +29,8 @@ void fizz_buzz(void)
 		}
 		if (digit < 100)
 		{
-			printf(" ")
+			printf(" ");
+		}
 	}
 }
 int main(void)
