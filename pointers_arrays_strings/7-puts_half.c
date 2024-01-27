@@ -10,7 +10,7 @@ void puts_half(char *str)
 	size_t length = strlen(str);
 	if (length % 2 != 0)
 	{
-		length = length - 1;
+		length = length + 1;
 	}
 	length = length / 2;
 	printf("%s\n", str + length);
