@@ -11,6 +11,9 @@ void puts2(char *str)
 {
     unsigned int i = 0;
 
+    if (!str)
+        return; /* Handle NULL pointer gracefully */
+
     while (str[i] != '\0')
     {
         /* Print characters at even indices */
