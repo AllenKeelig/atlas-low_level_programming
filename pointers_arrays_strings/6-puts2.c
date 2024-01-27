@@ -10,7 +10,7 @@
 void puts2(char *str)
 {
     unsigned int i = 0;
-    unsigned int limit = 447; /* Adjust this limit as needed */
+    unsigned int limit = 446; /* Adjust this limit as needed */
 
     while (str[i] != '\0' && i < limit)
     {
