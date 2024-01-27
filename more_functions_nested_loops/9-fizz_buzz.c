@@ -34,12 +34,12 @@ void fizz_buzz(void)
 	}
 	printf("\n");
 }
-/**
- * main - its fucking main betty
- *
- * return 0 SUCCESS
- */
 
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	fizz_buzz();
