@@ -10,7 +10,7 @@
 void print_rev(char *s)
 {
 	/* Calculate the length of the string */
-	int length = 0;
+	int i, length = 0;
 
 	while (s[length] != '\0')
 	{
@@ -18,7 +18,6 @@ void print_rev(char *s)
 	}
 
 	/* Print the characters in reverse order */
-	int i;
 	for (i = length - 1; i >= 0; i--)
 	{
 		_putchar(s[i]);
