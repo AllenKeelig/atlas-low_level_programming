@@ -10,11 +10,9 @@
 void puts2(char *str)
 {
     unsigned int i = 0;
+    unsigned int limit = 224; // Adjust this limit as needed
 
-    if (!str)
-        return; /* Handle NULL pointer gracefully */
-
-    while (str[i] != '\0')
+    while (str[i] != '\0' && i < limit)
     {
         /* Print characters at even indices */
         _putchar(str[i]);
