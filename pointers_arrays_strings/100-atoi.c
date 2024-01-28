@@ -11,7 +11,6 @@
  */
 int _atoi(char *s)
 {
-
 	int sign = 1;
 	long result = 0;
 	int digit_found = 0;  /* Variable to check if any digit is found */
@@ -35,9 +34,9 @@ int _atoi(char *s)
 		{
 			/* Overflow would occur, return appropriate value */
 			if (sign == 1)
-				return INT_MAX;
+				return (INT_MAX);
 			else
-				return INT_MIN;
+				return (INT_MIN);
 		}
 
 		/* Update result */
