@@ -10,30 +10,30 @@
  */
 int _atoi(char *s)
 {
-	int sign = 1;
-	long result = 0;
-	int i = 0;
+    int sign = 1;
+    long result = 0;
+    int i = 0;
 
-	/* Skip leading whitespaces, signs, and non-digit characters */
-	while (isspace(s[i]) || (s[i] == '-' || s[i] == '+') || !isdigit(s[i]))
-	{
-		if (s[i] == '-')
-			sign *= -1;
-		i++;
-	}
+    /* Skip leading whitespaces and signs */
+    while (isspace(s[i]) || s[i] == '-' || s[i] == '+')
+    {
+        if (s[i] == '-')
+            sign *= -1;
+        i++;
+    }
 
-	/* Process digits and build the result */
-	while (isdigit(s[i]))
-	{
-		result = result * 10 + (s[i] - '0');
+    /* Process digits and build the result */
+    while (isdigit(s[i]))
+    {
+        result = result * 10 + (s[i] - '0');
 
-		/* Check for overflow or underflow */
-		if ((sign == 1 && result > INT_MAX) || (sign == -1 && -result < INT_MIN))
-			return (sign == 1 ? INT_MAX : INT_MIN);
+        /* Check for overflow or underflow */
+        if ((sign == 1 && result > INT_MAX) || (sign == -1 && -result < INT_MIN))
+            return (sign == 1 ? INT_MAX : INT_MIN);
 
-		i++;
-	}
+        i++;
+    }
 
-	return (sign * (int)result);
+    return (sign * (int)result);
 }
 
