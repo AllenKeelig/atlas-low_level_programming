@@ -9,7 +9,7 @@
 int _atoi(char *s)
 {
     int sign = 1;
-    int result = 0;
+    long result = 0;  /* Change the result type to long */
     int i = 0;
 
     while (s[i] == ' ' || (s[i] >= 9 && s[i] <= 13))
@@ -28,6 +28,6 @@ int _atoi(char *s)
         i++;
     }
 
-    return sign * result;
+    return sign * (int)result;  /* Cast the result back to int before returning */
 }
 
