@@ -15,7 +15,7 @@ int _atoi(char *s)
 	int digit_count = 0; /* Track the number of consecutive digits */
 
 	/* Skip leading whitespaces and non-digit characters */
-	while (s[i] == ' ' || (s[i] >= 9 && s[i] <= 13) || s[i] == '-' || s[i] == '+')
+	while (s[i] && (s[i] == ' ' || (s[i] >= 9 && s[i] <= 13) || s[i] == '-' || s[i] == '+'))
 	{
 		if (s[i] == '-')
 			sign *= -1;
@@ -23,7 +23,7 @@ int _atoi(char *s)
 	}
 
 	/* Process digits and build the result */
-	while ((s[i] >= '0' && s[i] <= '9') || (s[i] == '-' && digit_count == 0))
+	while (s[i] && ((s[i] >= '0' && s[i] <= '9') || (s[i] == '-' && digit_count == 0)))
 	{
 		if (s[i] == '-')
 			sign *= -1;
