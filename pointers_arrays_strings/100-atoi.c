@@ -45,6 +45,6 @@ int _atoi(char *s)
 	}
 
 	/* Apply sign to result */
-	return (digit_found) ? (sign * result) : 0;
+	return (digit_found ? (sign * result) : 0);
 }
 
