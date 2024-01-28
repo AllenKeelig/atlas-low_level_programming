@@ -14,8 +14,8 @@ int _atoi(char *s)
 	long result = 0;
 	int i = 0;
 
-	/* Skip leading whitespaces and non-digit characters */
-	while (isspace(s[i]) || s[i] == '-' || s[i] == '+')
+	/* Skip leading whitespaces, signs, and non-digit characters */
+	while (isspace(s[i]) || (s[i] == '-' || s[i] == '+') || !isdigit(s[i]))
 	{
 		if (s[i] == '-')
 			sign *= -1;
