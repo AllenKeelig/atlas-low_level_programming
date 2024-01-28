@@ -13,12 +13,15 @@ int _atoi(char *s)
     int sign = 1;
     long result = 0;
     int i = 0;
+    int digitEncountered = 0;  /* Flag to track if any digit is encountered */
 
     /* Skip leading whitespaces, signs, and non-digit characters */
     while (isspace(s[i]) || (s[i] == '-' || s[i] == '+') || !isdigit(s[i]))
     {
         if (s[i] == '-')
             sign *= -1;
+        if (isdigit(s[i]))
+            digitEncountered = 1;  /* Set the flag when a digit is encountered */
         i++;
     }
 
@@ -34,6 +37,5 @@ int _atoi(char *s)
         i++;
     }
 
-    return (sign * (int)result);
-}
+    return digitEncountered 
 
