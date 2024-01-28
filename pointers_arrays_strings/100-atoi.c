@@ -15,7 +15,7 @@ int _atoi(char *s)
     int i = 0;
 
     /* Skip leading whitespaces and signs */
-    while (isspace(s[i]) || s[i] == '-' || s[i] == '+')
+    while (s[i] && (isspace(s[i]) || s[i] == '-' || s[i] == '+'))
     {
         if (s[i] == '-')
             sign *= -1;
