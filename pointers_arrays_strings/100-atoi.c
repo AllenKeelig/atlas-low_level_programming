@@ -13,18 +13,21 @@ int _atoi(char *s)
     int sign = 1;
     long result = 0;
     int i = 0;
+    int digit_found = 0;  /* Variable to track if digits are found */
 
-    /* Skip leading whitespaces and signs, continue only if there are digits */
+    /* Skip leading whitespaces, signs, and non-digit characters */
     while (isspace(s[i]) || (s[i] == '-' || s[i] == '+') || !isdigit(s[i]))
     {
         if (s[i] == '-')
             sign *= -1;
+        if (isdigit(s[i]))
+            digit_found = 1;  /* Set to 1 if digits are found */
         i++;
-
-        // If end of string is reached and no digits are encountered, break the loop
-        if (s[i] == '\0' && !isdigit(s[i - 1]))
-            break;
     }
+
+    /* If no digits are found, return 0 */
+    if (digit_found == 0)
+        return 0;
 
     /* Process digits and build the result */
     while (isdigit(s[i]))
