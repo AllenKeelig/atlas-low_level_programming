@@ -1,41 +1,56 @@
-#include "main.h"
 #include <limits.h>
-#include <ctype.h>
 
 /**
- * _atoi - Convert a string to an integer.
+ * _atoi - Converts a string to an integer.
  * @s: The input string.
  *
- * Return: The converted integer, or 0 if no valid integer is found.
+ * Return: The converted integer.
  */
 int _atoi(char *s)
 {
-    int sign = 1;
-    long result = 0;
-    int i = 0;
-    int digitEncountered = 0;  /* Flag to track if any digit is encountered */
+	int result = 0;
+	int sign = 1; /* Default sign is positive */
 
-    /* Skip leading whitespaces, signs, and non-digit characters */
-    while (isspace(s[i]) || (s[i] == '-' || s[i] == '+') || !isdigit(s[i]))
-    {
-        if (s[i] == '-')
-            sign *= -1;
-        if (isdigit(s[i]))
-            digitEncountered = 1;  /* Set the flag when a digit is encountered */
-        i++;
-    }
+	/* Skip leading whitespace */
+	while (*s == ' ' || (*s >= 9 && *s <= 13))
+	{
+		s++;
+	}
 
-    /* Process digits and build the result */
-    while (isdigit(s[i]))
-    {
-        result = result * 10 + (s[i] - '0');
+	/* Handle sign */
+	if (*s == '-')
+	{
+		sign = -1;
+		s++;
+	}
+	else if (*s == '+')
+	{
+		s++;
+	}
 
-        /* Check for overflow or underflow */
-        if ((sign == 1 && result > INT_MAX) || (sign == -1 && -result < INT_MIN))
-            return (sign == 1 ? INT_MAX : INT_MIN);
+	/* Process digits */
+	while (*s >= '0' && *s <= '9')
+	{
+		/* Check for overflow */
+		if (result > (INT_MAX - (*s - '0')) / 10)
+		{
+			/* Overflow would occur, return appropriate value */
+			if (sign == 1)
+			{
+				return INT_MAX;
+			}
+			else
+			{
+				return INT_MIN;
+			}
+		}
 
-        i++;
-    }
+		/* Update result */
+		result = result * 10 + (*s - '0');
+		s++;
+	}
 
-    return digitEncountered 
+	/* Apply sign to result */
+	return sign * result;
+}
 
