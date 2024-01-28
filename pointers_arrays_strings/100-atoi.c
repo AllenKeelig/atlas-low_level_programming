@@ -14,7 +14,7 @@ int _atoi(char *s)
 	int i = 0;
 
 	/* Skip leading whitespaces and non-digit characters */
-	while (s[i] == ' ' || (s[i] >= 9 && s[i] <= 13) || (s[i] == '-' && s[i + 1] >= '0' && s[i + 1] <= '9'))
+	while (s[i] == ' ' || (s[i] >= 9 && s[i] <= 13) || (s[i] == '-' || s[i] == '+'))
 	{
 		if (s[i] == '-')
 			sign *= -1;
