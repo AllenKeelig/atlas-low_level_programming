@@ -10,40 +10,27 @@
  */
 char *leet(char *input)
 {
-	size_t len = strlen(input);
-	char *result = (char *)malloc((len + 1) * sizeof(char));
-	size_t i;
 
-	for (i = 0; i < len; i++)
-	{
-		switch (input[i])
-		{
-			case 'a':
-			case 'A':
-				result[i] = '4';
-				break;
-			case 'e':
-			case 'E':
-				result[i] = '3';
-				break;
-			case 'o':
-			case 'O':
-				result[i] = '0';
-				break;
-			case 't':
-			case 'T':
-				result[i] = '7';
-				break;
-			case 'l':
-			case 'L':
-				result[i] = '1';
-				break;
-			default:
-				result[i] = input[i];
-				break;
-		}
-	}
+    size_t len = strlen(input);
+    char *result = (char *)malloc((len + 1) * sizeof(char));
+    size_t i
 
-	result[len] = '\0';
-	return (result);
+    for (i = 0; i < len; i++)
+    {
+        if (input[i] == 'a' || input[i] == 'A')
+            result[i] = '4';
+        else if (input[i] == 'e' || input[i] == 'E')
+            result[i] = '3';
+        else if (input[i] == 'o' || input[i] == 'O')
+            result[i] = '0';
+        else if (input[i] == 't' || input[i] == 'T')
+            result[i] = '7';
+        else if (input[i] == 'l' || input[i] == 'L')
+            result[i] = '1';
+        else
+            result[i] = input[i];
+    }
+
+    result[len] = '\0';
+    return result;
 }
