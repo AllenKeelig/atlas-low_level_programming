@@ -25,11 +25,16 @@ char *leet(char *input)
 			input[i] == 't' || input[i] == 'T' ||
 			input[i] == 'l' || input[i] == 'L')
 		{
-			result[i] = (input[i] == 'a' || input[i] == 'A') ? '4' :
-						(input[i] == 'e' || input[i] == 'E') ? '3' :
-						(input[i] == 'o' || input[i] == 'O') ? '0' :
-						(input[i] == 't' || input[i] == 'T') ? '7' :
-						(input[i] == 'l' || input[i] == 'L') ? '1' : input[i];
+			result[i] = (input[i] == 'a') ? '4' :
+				(input[i] == 'A') ? '4' :
+				(input[i] == 'e') ? '3' :
+				(input[i] == 'E') ? '3' :
+				(input[i] == 'o') ? '0' :
+				(input[i] == 'O') ? '0' :
+				(input[i] == 't') ? '7' :
+				(input[i] == 'T') ? '7' :
+				(input[i] == 'l') ? '1' :
+				(input[i] == 'L') ? '1' : input[i];
 		}
 		else
 		{
