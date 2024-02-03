@@ -28,11 +28,6 @@ char *cap_string(char *input)
 			input[i] = toupper(input[i]);
 			capitalize = 0;  /* Reset the flag */
 		}
-		else
-		{
-			/* Convert the current character to lowercase */
-			input[i] = tolower(input[i]);
-		}
 	}
 
 	return (input);  /* Return a pointer to the modified input string */
