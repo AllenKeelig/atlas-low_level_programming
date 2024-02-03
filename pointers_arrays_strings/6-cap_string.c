@@ -9,9 +9,10 @@
  */
 char *cap_string(char *input)
 {
+	int i;
 	int capitalize = 1;  /* Flag to indicate whether the next character should be capitalized */
 
-	for (int i = 0; input[i] != '\0'; i++)
+	for (i = 0; input[i] != '\0'; i++)
 	{
 		/* Check if the current character is a separator */
 		if (input[i] == ' ' || input[i] == '\t' || input[i] == '\n' || input[i] == ',' ||
