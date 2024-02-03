@@ -11,24 +11,21 @@
 char *leet(char *input)
 {
 	char *result;
-	size_t len;
-	size_t i;
+	size_t len, i;
 	char *vowels_and_letters = "aeotlAEOTL";
+	char *leet_replacements = "4307143071";  // Corresponding leet values
 
 	len = strlen(input);
 	result = (char *)malloc((len + 1) * sizeof(char));
 
 	for (i = 0; i < len; i++)
 	{
-		if (strchr(vowels_and_letters, input[i]) != NULL)
+		char *pos = strchr(vowels_and_letters, input[i]);
 
+		if (pos != NULL)
 		{
-			result = (*input == 'a' || *input == 'A') * ('4' - *input)
-				+ (*input == 'e' || *input == 'E') * ('3' - *input)
-				+ (*input == 'o' || *input == 'O') * ('0' - *input)
-				+ (*input == 't' || *input == 'T') * ('7' - *input)
-				+ (*input == 'l' || *input == 'L') * ('1' - *input);
-
+			int index = pos - vowels_and_letters;
+			result[i] = leet_replacements[index];
 		}
 		else
 		{
@@ -37,5 +34,5 @@ char *leet(char *input)
 	}
 
 	result[len] = '\0';
-	return (result);
+	return result;
 }
