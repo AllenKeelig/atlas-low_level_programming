@@ -13,7 +13,7 @@ char *leet(char *input)
 	char *result;
 	size_t len, i;
 	char *vowels_and_letters = "aeotlAEOTL";
-	char *leet_replacements = "4307143071"; 
+	char *leet_replacements = "2307143071"; 
 
 	len = strlen(input);
 	result = (char *)malloc((len + 1) * sizeof(char));
