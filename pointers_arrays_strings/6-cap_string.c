@@ -15,7 +15,8 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (capitalize_next && isalpha(str[i]))
+		if (capitalize_next && isalpha(str[i]) && !isdigit(str[i]))
+        {
 		{
 			/* Capitalize the current character if it's an alphabet character */
 			str[i] = toupper(str[i]);
