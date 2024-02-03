@@ -22,14 +22,11 @@ char *leet(char *input)
 	{
 		char *pos = strchr(vowels_and_letters, input[i]);
 
+		result[i] = input[i];
 		if (pos != NULL)
 		{
 			int index = pos - vowels_and_letters;
 			result[i] = leet_replacements[index];
-		}
-		else
-		{
-			result[i] = input[i];
 		}
 	}
 
