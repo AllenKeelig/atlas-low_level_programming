@@ -1,28 +1,38 @@
 #include <stdio.h>
 #include <ctype.h>
-#include "main.h"
 
 /**
- * cap_string - Capitalizes all words of a string.
- * @str: Input string.
+ * cap_string - Capitalizes all words in a string based on specified separators.
+ * @input: The input string to be capitalized.
  *
- * Return: Pointer to the modified string.
+ * Return: A pointer to the modified input string.
  */
-char *cap_string(char *str)
+char *cap_string(char *input)
 {
-	int i; /* Declaration moved outside of the loop */
-	int capitalize_next = 1; /* Flag to indicate the next character should be capitalized */
+	int capitalize = 1;  /* Flag to indicate whether the next character should be capitalized */
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (int i = 0; input[i] != '\0'; i++)
 	{
-		if (capitalize_next && isalpha(str[i]) && !isdigit(str[i]))
+		/* Check if the current character is a separator */
+		if (input[i] == ' ' || input[i] == '\t' || input[i] == '\n' || input[i] == ',' ||
+			input[i] == ';' || input[i] == '.' || input[i] == '!' || input[i] == '?' ||
+			input[i] == '"' || input[i] == '(' || input[i] == ')' || input[i] == '{' ||
+			input[i] == '}')
 		{
-			/* Capitalize the current character if it's an alphabet character */
-			str[i] = toupper(str[i]);
-			capitalize_next = 0;
+			capitalize = 1;  /* Set flag to capitalize the next character */
+		}
+		else if (capitalize)
+		{
+			/* Capitalize the current character if the flag is set */
+			input[i] = toupper(input[i]);
+			capitalize = 0;  /* Reset the flag */
+		}
+		else
+		{
+			/* Convert the current character to lowercase */
+			input[i] = tolower(input[i]);
 		}
 	}
 
-	return (str);
+	return (input);  /* Return a pointer to the modified input string */
 }
-
