@@ -20,6 +20,6 @@ char *string_toupper(char *str)
 		ptr++;
 	}
 
-	return str;
+	return (str);
 }
 
