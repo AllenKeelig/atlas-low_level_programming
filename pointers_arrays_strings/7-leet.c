@@ -13,7 +13,6 @@ char *leet(char *input)
 	char *result;
 	size_t len;
 	size_t i;
-	char input[] = "example";
 	char *vowels_and_letters = "aeotlAEOTL";
 
 	len = strlen(input);
