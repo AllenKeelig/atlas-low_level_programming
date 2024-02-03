@@ -16,7 +16,7 @@ char *cap_string(char *input)
 	{
 		/* Check if the current character is a separator */
 		if (input[i] == ' ' || input[i] == '\t' || input[i] == '\n' ||
-			       	input[i] == ',' ||
+			input[i] == ',' ||
 			input[i] == ';' || input[i] == '.' || input[i] == '!' || input[i] == '?' ||
 			input[i] == '"' || input[i] == '(' || input[i] == ')' || input[i] == '{' ||
 			input[i] == '}')
