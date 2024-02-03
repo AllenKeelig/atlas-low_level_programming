@@ -21,11 +21,6 @@ char *cap_string(char *str)
 			str[i] = toupper(str[i]);
 			capitalize_next = 0;
 		}
-		else if (!isalpha(str[i]))
-		{
-			/* Set the flag to capitalize the next alphabet character */
-			capitalize_next = 1;
-		}
 	}
 
 	return (str);
