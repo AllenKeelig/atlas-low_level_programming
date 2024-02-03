@@ -23,16 +23,12 @@ char *leet(char *input)
 		if (strchr(vowels_and_letters, input[i]) != NULL)
 
 		{
-			result[i] = (input[i] == 'a') ? '4' :
-				(input[i] == 'A') ? '4' :
-				(input[i] == 'e') ? '3' :
-				(input[i] == 'E') ? '3' :
-				(input[i] == 'o') ? '0' :
-				(input[i] == 'O') ? '0' :
-				(input[i] == 't') ? '7' :
-				(input[i] == 'T') ? '7' :
-				(input[i] == 'l') ? '1' :
-				(input[i] == 'L') ? '1' : input[i];
+			char replacement = (*ptr == 'a' || *ptr == 'A') * ('4' - *ptr)
+				+ (*ptr == 'e' || *ptr == 'E') * ('3' - *ptr)
+				+ (*ptr == 'o' || *ptr == 'O') * ('0' - *ptr)
+				+ (*ptr == 't' || *ptr == 'T') * ('7' - *ptr)
+				+ (*ptr == 'l' || *ptr == 'L') * ('1' - *ptr);
+
 		}
 		else
 		{
