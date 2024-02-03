@@ -13,7 +13,7 @@ char *leet(char *input)
 
     size_t len = strlen(input);
     char *result = (char *)malloc((len + 1) * sizeof(char));
-    size_t i
+    size_t i;
 
     for (i = 0; i < len; i++)
     {
