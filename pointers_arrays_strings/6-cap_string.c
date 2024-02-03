@@ -13,7 +13,7 @@ char *cap_string(char *str)
 	int i; /* Declaration moved outside of the loop */
 	int capitalize_next = 1; /* Flag to indicate the next character should be capitalized */
 
-	for (int i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (capitalize_next && isalpha(str[i]))
 		{
