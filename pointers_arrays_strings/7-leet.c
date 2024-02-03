@@ -13,17 +13,16 @@ char *leet(char *input)
 	char *result;
 	size_t len;
 	size_t i;
+	char input[] = "example";
+	char *vowels_and_letters = "aeotlAEOTL";
 
 	len = strlen(input);
 	result = (char *)malloc((len + 1) * sizeof(char));
 
 	for (i = 0; i < len; i++)
 	{
-		if (input[i] == 'a' || input[i] == 'A' ||
-			input[i] == 'e' || input[i] == 'E' ||
-			input[i] == 'o' || input[i] == 'O' ||
-			input[i] == 't' || input[i] == 'T' ||
-			input[i] == 'l' || input[i] == 'L')
+		if (strchr(vowels_and_letters, input[i]) != NULL)
+
 		{
 			result[i] = (input[i] == 'a') ? '4' :
 				(input[i] == 'A') ? '4' :
