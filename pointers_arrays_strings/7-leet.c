@@ -6,7 +6,7 @@ char *leet(const char *input)
 {
 	size_t len = strlen(input);
 	char *result = (char *)malloc((len + 1) * sizeof(char));
-	size_t i
+	size_t i;
 	char *vowels_and_letters = "aeotlAEOTL";
 	char *leet_replacements = "4307143071";
 
