@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 /**
- * cap_string - Capitalizes all words in a string based on specified separators.
+ * cap_string - Capitalizes all words in a string
  * @input: The input string to be capitalized.
  *
  * Return: A pointer to the modified input string.
@@ -10,12 +10,13 @@
 char *cap_string(char *input)
 {
 	int i;
-	int capitalize = 1;  /* Flag to indicate whether the next character should be capitalized */
+	int capitalize = 1;
 
 	for (i = 0; input[i] != '\0'; i++)
 	{
 		/* Check if the current character is a separator */
-		if (input[i] == ' ' || input[i] == '\t' || input[i] == '\n' || input[i] == ',' ||
+		if (input[i] == ' ' || input[i] == '\t' || input[i] == '\n' ||
+			       	input[i] == ',' ||
 			input[i] == ';' || input[i] == '.' || input[i] == '!' || input[i] == '?' ||
 			input[i] == '"' || input[i] == '(' || input[i] == ')' || input[i] == '{' ||
 			input[i] == '}')
