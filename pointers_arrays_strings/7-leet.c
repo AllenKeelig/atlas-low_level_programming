@@ -23,7 +23,7 @@ char *leet(char *input)
 		if (strchr(vowels_and_letters, input[i]) != NULL)
 
 		{
-			char replacement = (*input == 'a' || *input == 'A') * ('4' - *input)
+			result = (*input == 'a' || *input == 'A') * ('4' - *input)
 				+ (*input == 'e' || *input == 'E') * ('3' - *input)
 				+ (*input == 'o' || *input == 'O') * ('0' - *input)
 				+ (*input == 't' || *input == 'T') * ('7' - *input)
