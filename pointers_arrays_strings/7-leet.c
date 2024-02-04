@@ -29,5 +29,5 @@ char *leet(char *input)
 		}
 	}
 
-	return input;
+	return (input);
 }
