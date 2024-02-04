@@ -25,6 +25,7 @@ char *leet(char *input)
 		if (pos != NULL)
 		{
 			int index = pos - vowels_and_letters;
+
 			input[i] = leet_replacements[index];
 		}
 	}
