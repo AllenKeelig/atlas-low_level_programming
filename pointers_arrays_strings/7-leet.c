@@ -9,27 +9,25 @@
  *
  * Return: A dynamically allocated string containing the encoded result.
  */
+
 char *leet(char *input)
 {
-	char *result;
-	size_t len, i;
-	char *vowels_and_letters = "aeotlAEOTL";
-	char *leet_replacements = "2307143071"; 
+    size_t len, i;
+    char *vowels_and_letters = "aeotlAEOTL";
+    char *leet_replacements = "4307143071";
 
-	len = strlen(input);
+    len = strlen(input);
 
-	for (i = 0; i < len; i++)
-	{
-		char *pos = strchr(vowels_and_letters, input[i]);
+    for (i = 0; i < len; i++)
+    {
+        char *pos = strchr(vowels_and_letters, input[i]);
 
-		result[i] = input[i];
-		if (pos != NULL)
-		{
-			int index = pos - vowels_and_letters;
-			result[i] = leet_replacements[index];
-		}
-	}
+        if (pos != NULL)
+        {
+            int index = pos - vowels_and_letters;
+            input[i] = leet_replacements[index];
+        }
+    }
 
-	result[len] = '\0';
-	return result;
+    return input;
 }
