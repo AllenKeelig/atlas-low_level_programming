@@ -16,15 +16,16 @@ unsigned int _strspn(char *s, char *accept)
 	while (*s)
 	{
 		found = 0;
-		while (*accept)
+		char *temp_accept = accept;
+		while (*temp_accept)
 		{
-			if (*s == *accept)
+			if (*s == *temp_accept)
 			{
 				count++;
 				found = 1;
 				break;
 			}
-			accept++;
+			temp_accept++;
 		}
 		if (!found)
 		{
@@ -33,6 +34,6 @@ unsigned int _strspn(char *s, char *accept)
 		s++;
 	}
 
-	return (count);
+	return count;
 }
 
