@@ -16,5 +16,6 @@ int _atoi(char *s);
 char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
+char *_strchr(char *s, char c);
 
 #endif /*MAIN_H*/

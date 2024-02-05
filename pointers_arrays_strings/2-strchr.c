@@ -18,6 +18,6 @@ char *_strchr(char *s, char c)
 	}
 
 	/* If the character is not found, return NULL */
-	return (NULL);
+	return (' ');
 }
 
