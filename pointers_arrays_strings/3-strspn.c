@@ -12,12 +12,11 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int count = 0;
 	int found;
-	char *temp_accept;
+	char *temp_accept = accept;
 
 	while (*s)
 	{
 		found = 0;
-		*temp_accept = accept;
 		while (*temp_accept)
 		{
 			if (*s == *temp_accept)
