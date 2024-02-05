@@ -7,13 +7,14 @@
  * Return:char
  */
 
-char *_strpbrk(char *s, char *accept) 
+char *_strpbrk(char *s, char *accept)
 {
 	while (*s)
 	{
 		char *accept_ptr = accept;
+
 		while (*accept_ptr)
-		
+
 		{
 			if (*s == *accept_ptr) 
 			{
@@ -22,6 +23,6 @@ char *_strpbrk(char *s, char *accept)
 			accept_ptr++;
 		}
 		s++;
-    }
+	}
 	return ((char *)0);
 }
