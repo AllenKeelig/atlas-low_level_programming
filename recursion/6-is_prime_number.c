@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * is_prime_recursive - Helper function to check if a number is prime recursively.
+ * is_prime_recursive - Helper function
  * @n: The number to be checked.
  * @divisor: The divisor to check divisibility.
  *
@@ -12,7 +12,6 @@ int is_prime_recursive(int n, int divisor)
 {
 	if (divisor == 1)
 		return (1);  /* 1 is not prime */
-	else
 	{
 		if (n % divisor == 0 && divisor != n)
 			return (0);  /* n is divisible by divisor, not prime */
