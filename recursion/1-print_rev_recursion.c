@@ -6,7 +6,7 @@
  * _print_rev_recursion - Prints a reversed string using recursion.
  * @s: The string to be printed.
  */
-void _print_rev_recursion(char *s);
+void _print_rev_recursion(char *s)
 {
         /* Calculate the length of the string */
         size_t length = strlen(s);
