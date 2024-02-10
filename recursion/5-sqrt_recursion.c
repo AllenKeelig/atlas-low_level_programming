@@ -18,7 +18,9 @@ int custom_sqrt(int n, int guess)
 
 int _sqrt_recursion(int n)
 {
+	if (n < 0)
+		return (-1)
 	int result = custom_sqrt(n, n / 2);
-	return result;
+	return (result);
 }
 
