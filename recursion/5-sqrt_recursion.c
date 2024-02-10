@@ -12,12 +12,12 @@
 int custom_sqrt_helper(int n, int guess, int prev_guess)
 {
 	if (n == 0 || n == 1)
-		return n;
+		return (n);
 
 	if (guess == prev_guess)
-		return guess;
+		return (guess);
 
-	return custom_sqrt_helper(n, (guess + n / guess) / 2, guess);
+	return (custom_sqrt_helper(n, (guess + n / guess) / 2, guess));
 }
 
 /**
@@ -29,9 +29,9 @@ int custom_sqrt_helper(int n, int guess, int prev_guess)
 int custom_sqrt(int n)
 {
 	if (n < 0)
-		return -1;  /* or handle negative input accordingly */
+		return (-1);  /* or handle negative input accordingly */
 
-	return custom_sqrt_helper(n, n / 2, 0);
+	return (custom_sqrt_helper(n, n / 2, 0));
 }
 
 /**
@@ -42,6 +42,6 @@ int custom_sqrt(int n)
  */
 int _sqrt_recursion(int n)
 {
-	return custom_sqrt(n);
+	return (custom_sqrt(n));
 }
 
