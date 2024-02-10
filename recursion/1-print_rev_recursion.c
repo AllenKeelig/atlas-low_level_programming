@@ -21,5 +21,5 @@ void _print_rev_recursion(char *s)
         /* Only change from last */
 	s += length - 1;
         putchar(*s);
-        _print_rev_recursion(s - 1);
+        _print_rev_recursion(s--);
 }
