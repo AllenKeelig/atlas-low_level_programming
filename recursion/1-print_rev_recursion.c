@@ -8,18 +8,9 @@
  */
 void _print_rev_recursion(char *s)
 {
-        /* Calculate the length of the string */
-        size_t length = strlen(s);
-
-        /* Base case: if the length is 0, print a newline and return */
-        if (length == 0)
-        {
-                putchar('\n');
-                return;
-        }
-
-        /* Only change from last */
-	s += length - 1;
-        putchar(*s);
-        _print_rev_recursion(s--);
+	/*everything online says to do this so thats boring but whatever */
+	if (*str) {
+        print_rev_recursive(str + 1);
+        putchar(*str);
+    }
 }
