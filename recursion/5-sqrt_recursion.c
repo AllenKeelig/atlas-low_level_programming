@@ -5,5 +5,5 @@
 int _sqrt_recursion(int n)
 {
 	int result = (int)sqrt((double)num);
-	return (result)
+	return (result);
 }
