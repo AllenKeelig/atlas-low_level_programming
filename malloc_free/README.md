@@ -1,0 +1,1 @@
+I'm watching a summarization of kanyes bs and holy fucking shit, how does anyone like him? no his music isn't good (well I don't like it but even if you like it it can't be good enough to justify liking it in spite of the artist)
