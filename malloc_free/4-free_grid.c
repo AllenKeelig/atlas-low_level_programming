@@ -7,18 +7,20 @@
  */
 void free_grid(int **grid, int height)
 {
-	if (grid == NULL || height <= 0)
-	{
-		return; /* Invalid input */
-	}
+    int i;
 
-	/* Free each row */
-	for (int i = 0; i < height; i++)
-	{
-		free(grid[i]);
-	}
+    if (grid == NULL || height <= 0)
+    {
+        return; /* Invalid input */
+    }
 
-	/* Free the array of row pointers */
-	free(grid);
+    /* Free each row */
+    for (i = 0; i < height; i++)
+    {
+        free(grid[i]);
+    }
+
+    /* Free the array of row pointers */
+    free(grid);
 }
 
