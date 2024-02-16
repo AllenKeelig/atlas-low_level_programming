@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 /**
- * create_array - Creates an array of chars and initializes it with a specific char.
+ * create_array - Creates an array of chars and initializes it with a specific
  * @size: The size of the array.
  * @c: The char with which to initialize the array.
  *
@@ -26,7 +26,7 @@ char *create_array(unsigned int size, char c)
 
 	for (i = 0; i < size; i++)
 	{
-		newArray[i] = c; /* Initialize each element with the specified char */
+		newArray[i] = c; /* Initialize each element with the specifie*/
 	}
 
 	return (newArray);
