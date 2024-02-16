@@ -13,15 +13,15 @@ char *_strdup(char *str)
 	char *duplicate;
 
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 
 	duplicate = (char *)malloc((strlen(str) + 1) * sizeof(char));
 
 	if (duplicate == NULL)
-		return NULL; /* Insufficient memory */
+		return (NULL); /* Insufficient memory */
 
 	strcpy(duplicate, str);
 
-	return duplicate;
+	return (duplicate);
 }
 
