@@ -10,18 +10,22 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	unsigned int i;
+	unsigned int total_size;
+	unsigned char *byte_ptr
+
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	unsigned int total_size = nmemb * size;
+	total_size = nmemb * size;
 	void *ptr = malloc(total_size);
 
 	if (ptr == NULL)
 		return (NULL);
 
 	/* Set the allocated memory to zero */
-	unsigned char *byte_ptr = (unsigned char *)ptr;
-	for (unsigned int i = 0; i < total_size; i++)
+	byte_ptr = (unsigned char *)ptr;
+	for (i = 0; i < total_size; i++)
 		byte_ptr[i] = 0;
 
 	return (ptr);
