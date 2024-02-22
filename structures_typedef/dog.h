@@ -12,7 +12,7 @@
 
 
 
-struct dog
+struct init_dog
 {
 	char *name;
 	float age;
