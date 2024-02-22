@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-struct dog {
+struct init_dog {
     char *name;
     float age;
     char *owner;
