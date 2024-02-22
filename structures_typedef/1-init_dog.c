@@ -1,11 +1,5 @@
 #include <stdio.h>
 
-struct dog {
-    char *name;
-    float age;
-    char *owner;
-};
-
 /**
  * init_dog - Initializes a variable of type struct dog
  * @d: Pointer to the struct dog variable to be initialized
