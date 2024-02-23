@@ -14,6 +14,8 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	struct dog *newdog;
+	int name_len = 0;
+	int owner_len = 0;
 
 	if (name == NULL || owner == NULL)
 		return NULL;
@@ -22,11 +24,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (newdog == NULL)
 		return NULL;
 	
-	int name_len = 0;
 	while (name[name_len] != '\0')
 		name_len++;
 
-	int owner_len = 0;
 	while (owner[owner_len] != '\0')
 		owner_len++;
 
