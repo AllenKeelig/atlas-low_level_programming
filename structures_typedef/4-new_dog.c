@@ -8,7 +8,7 @@
  * @dest: fucking stupid betty
  * @src: string?
  *
- * return: dest i guess, copied string whatever
+ * Return: dest i guess, copied string whatever
  */
 
 char *_strcpy(char *dest, char *src)
