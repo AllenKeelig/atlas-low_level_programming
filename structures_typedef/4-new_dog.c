@@ -14,7 +14,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
-	struct newdog;
+	struct *newdog;
 
 	if (name == NULL || owner == NULL)
 		return NULL;
