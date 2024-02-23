@@ -4,6 +4,31 @@
 #include "dog.h"
 
 /**
+ * _strcpy - because its easier to make one than not use it.
+ *
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int len, i;
+
+	len = 0;
+
+	while (src[len] != '\0')
+	{
+		len++;
+	}
+
+	for (i = 0; i < len; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
+
+	return (dest);
+}
+
+/**
  * new_dog - Creates a new dog.
  * @name: The name of the dog.
  * @age: The age of the dog.
