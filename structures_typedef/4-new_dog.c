@@ -5,7 +5,10 @@
 
 /**
  * _strcpy - because its easier to make one than not use it.
+ * @dest - fucking stupid betty
+ * @src - string?
  *
+ * return: dest i guess, copied string whatever
  */
 
 char *_strcpy(char *dest, char *src)
