@@ -34,7 +34,7 @@ char *_strcpy(char *dest, char *src)
  * @age: The age of the dog.
  * @owner: The owner of the dog.
  *
- * Return: A pointer to the new dog (struct dog), or NULL if the function fails.
+ * Return: A pointer to the new dog (struct dog), or NULL.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -43,11 +43,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int owner_len = 0;
 
 	if (name == NULL || owner == NULL)
-		return NULL;
+		return (NULL);
 
 	newdog = malloc(sizeof(dog_t));
 	if (newdog == NULL)
-		return NULL;
+		return (NULL);
 	
 	while (name[name_len] != '\0')
 		name_len++;
@@ -62,13 +62,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(newdog->name);
 		free(newdog->owner);
 		free(newdog);
-		return NULL;
+		return (NULL);
 	}
 
 	_strcpy(newdog->name, name);
 	_strcpy(newdog->owner, owner);
 	newdog->age = age;
 
-	return newdog;
+	return (newdog);
 }
 
