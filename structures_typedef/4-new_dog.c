@@ -13,7 +13,7 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog
+	struct dog;
 
 	if (name == NULL || owner == NULL)
 		return NULL;
