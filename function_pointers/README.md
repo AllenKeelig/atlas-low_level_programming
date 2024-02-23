@@ -1,0 +1,2 @@
+
+newdog->name = name;
