@@ -3,6 +3,14 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+ * get_op_func - picks the operators function
+ * @s: the operator
+ * @int: the integers
+ *
+ * Return: the operator required.
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	int i = 0;
