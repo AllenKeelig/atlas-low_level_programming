@@ -6,7 +6,6 @@
 /**
  * get_op_func - picks the operators function
  * @s: the operator
- * @int: the integers
  *
  * Return: the operator required.
  */
