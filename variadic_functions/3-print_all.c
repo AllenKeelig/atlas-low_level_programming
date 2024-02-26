@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	char *separator = "";
 	const char *str;
 
-	if (format == null)
+	if (format == NULL)
 	{
 		printf("\n");
 		return;
