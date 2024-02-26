@@ -17,6 +17,9 @@ void print_all(const char * const format, ...)
 
 	while (format && format[i])
 	{
+		if (i > 0)
+			printf(", ");
+
 		switch (format[i])
 		{
 			case 'c':
@@ -36,8 +39,6 @@ void print_all(const char * const format, ...)
 				break;
 		}
 
-		if (i > 0)
-			separator = ", ";
 		i++;
 	}
 
