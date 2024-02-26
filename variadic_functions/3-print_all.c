@@ -10,20 +10,16 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	unsigned int i = 0;
-	char *separator = "";
-	const char *str;
+	const char *str, *separator = "";
 
 	if (format == NULL)
 	{
 		printf("\n");
 		return;
 	}
-			
 	va_start(args, format);
-
 	while (format[i])
 	{
-
 		switch (format[i])
 		{
 			case 'c':
@@ -45,13 +41,9 @@ void print_all(const char * const format, ...)
 				i++;
 				continue;
 		}
-
 		separator = ", ";
-
 		i++;
 	}
-
 	va_end(args);
-
 	printf("\n");
 }
