@@ -36,7 +36,8 @@ void print_all(const char * const format, ...)
 				break;
 		}
 
-		separator = ", ";
+		if (i > 0)
+			separator = ", ";
 		i++;
 	}
 
