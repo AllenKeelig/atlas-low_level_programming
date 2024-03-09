@@ -5,7 +5,7 @@
  * struct list_s - A structure representing a linked list node.
  * @str: Pointer to a string (or NULL if no string is present).
  * @len: Length of the string (or 0 if no string is present).
- * @next: Pointer to the next node in the linked list (or NULL if the last node).
+ * @next: Pointer to the next node in the linked list or NULL if the last node
  *
  * Description: This structure defines a node in a singly linked list.
  * Each node contains a string, its length, and a pointer to the next node.
