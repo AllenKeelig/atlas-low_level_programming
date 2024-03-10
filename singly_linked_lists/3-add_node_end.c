@@ -25,8 +25,14 @@ list_t *add_node_end(list_t **head, const char *str)
 		free(new_node);	/* Memory allocation for the string failed */
 		return (NULL);
 	}
+	/* Calculate the length of the string manually */
+	size_t len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
 
-	new_node->len;
+	new_node->len = len;
 	new_node->next = NULL;	/* The new node will be the last, so its next is NULL */
 
 	if (*head == NULL)
