@@ -14,6 +14,7 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	size_t len = 0;
 	list_t *new_node = malloc(sizeof(list_t));
+
 	if (head == NULL || str == NULL)
 		return (NULL);	/* Invalid input parameters */
 
@@ -27,23 +28,23 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	/* Calculate the length of the string manually */
-	 while (str[len] != '\0')
-	 {
+	while (str[len] != '\0')
+	{
 		len++;
 	}
 
 	new_node->len = len;
-	new_node->next = NULL;	/* The new node will be the last, so its next is NULL */
+	new_node->next = NULL;
 
 	if (*head == NULL)
-		*head = new_node;	/* If the list is empty, the new node becomes the head */
+		*head = new_node;
 	else
 	{
 		list_t *current = *head;
 
 		while (current->next != NULL)
-			current = current->next;	/* Traverse the list until the last node is reached */
-		current->next = new_node;	/* Set the next pointer of the last node to the new node */
+			current = current->next;
+		current->next = new_node;
 	}
 
 	return new_node;
