@@ -26,7 +26,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	new_node->len = 0;	/* Initialize the length to 0 for now */
+	new_node->len;
 	new_node->next = NULL;	/* The new node will be the last, so its next is NULL */
 
 	if (*head == NULL)
