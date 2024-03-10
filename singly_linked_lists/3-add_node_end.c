@@ -27,6 +27,8 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	/* Calculate the length of the string manually */
+	 while (str[len] != '\0')
+	 {
 		len++;
 	}
 
