@@ -21,7 +21,12 @@ list_t *add_node(list_t **head, const char *str)
 	if (new_node == NULL) {
 		return NULL;	/* Memory allocation failed */
 	}
-
+	
+	size_t len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
 	new_node->str = strdup(str);
 	if (new_node->str == NULL) {
 		free(new_node);	/* Memory allocation for the string failed */
