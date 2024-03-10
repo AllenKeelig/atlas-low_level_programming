@@ -12,6 +12,7 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
+	size_t len = 0;
 	list_t *new_node = malloc(sizeof(list_t));
 	if (head == NULL || str == NULL)
 		return (NULL);	/* Invalid input parameters */
@@ -26,9 +27,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	/* Calculate the length of the string manually */
-	size_t len = 0;
-	while (str[len] != '\0')
-	{
 		len++;
 	}
 
