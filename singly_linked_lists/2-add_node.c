@@ -15,27 +15,24 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *new_node = malloc(sizeof(list_t));
 	size_t len = 0;
 
-	if (head == NULL || str == NULL) {
-		return NULL;	/* Invalid input parameters */
-	}
+	if (head == NULL || str == NULL)
+		return (NULL);	/* Invalid input parameters */
 
-	if (new_node == NULL) {
-		return NULL;	/* Memory allocation failed */
-	}
+	if (new_node == NULL)
+		return (NULL);	/* Memory allocation failed */
 	
 	while (str[len] != '\0')
-	{
 		len++;
-	}
 	new_node->str = strdup(str);
-	if (new_node->str == NULL) {
+	if (new_node->str == NULL)
+	{
 		free(new_node);	/* Memory allocation for the string failed */
-		return NULL;
+		return (NULL);
 	}
 
 	new_node->len = len;
 	new_node->next = *head;	/* Set the next pointer to the current head */
 	*head = new_node;		/* Update the head to point to the new node */
 
-	return new_node;
+	return (new_node);
 }
