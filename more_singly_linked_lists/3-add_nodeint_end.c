@@ -12,13 +12,14 @@
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *new_node = malloc(sizeof(listint_t));
+
 	if (head == NULL)
 	{
-		return NULL;  /* Invalid input parameter */
+		return (NULL);  /* Invalid input parameter */
 	}
 	if (new_node == NULL)
 	{
-		return NULL;  /* Memory allocation failed */
+		return (NULL);  /* Memory allocation failed */
 	}
 	new_node->n = n;
 	new_node->next = NULL;
@@ -28,8 +29,8 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	{
 		listint_t *current = *head;
 		while (current->next != NULL)
-			current = current->next;  /* Traverse the list until the last node is reached */
-		current->next = new_node;  /* Set the next pointer of the last node to the new node */
+			current = current->next;
+		current->next = new_node;
 	}
 	return new_node;
 }
