@@ -58,7 +58,8 @@ int main(int argc, char *argv[])
 
 	if (bytes_read == -1)
 	{
-		handle_error(98, "Error: Can't read from file", fd_from, fd_to);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 
 	if (close(fd_from) == -1 || close(fd_to) == -1)
