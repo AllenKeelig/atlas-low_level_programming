@@ -22,15 +22,14 @@ void handle_error(int code, const char *message, int fd1, int fd2)
 
 int main(int argc, char *argv[])
 {
+	int fd_from, fd_to;
+	ssize_t bytes_read, bytes_written;
+	char buffer[BUFFER_SIZE];
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
 		exit(97);
 	}
-
-	int fd_from, fd_to;
-	ssize_t bytes_read, bytes_written;
-	char buffer[BUFFER_SIZE];
 
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
