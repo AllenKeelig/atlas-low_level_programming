@@ -54,6 +54,7 @@ int main(int argc, char *argv[])
 				handle_error(99, "Error: Can't write to file", fd_from, fd_to);
 			}
 		}
+	}
 
 	if (bytes_read == -1)
 	{
