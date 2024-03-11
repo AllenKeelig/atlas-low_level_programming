@@ -24,12 +24,13 @@ void handle_error(int code, const char *message, int fd1, int fd2)
 int openFile(const char *filename, int flags)
 {
 	int fd = open(filename, flags);
+
 	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", filename);
 		exit(98);
 	}
-	return fd;
+	return (fd);
 }
 
 void copyFile(int fd_from, int fd_to)
@@ -64,19 +65,19 @@ void closeFile(int fd)
 
 int main(int argc, char *argv[])
 {
+	int fd_from = openFile(argv[1], O_RDONLY);
+	int fd_to = openFile(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
-	int fd_from = openFile(argv[1], O_RDONLY);
-	int fd_to = openFile(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
 	copyFile(fd_from, fd_to);
 
 	closeFile(fd_from);
 	closeFile(fd_to);
 
-	return 0;
+	return (0);
 }
