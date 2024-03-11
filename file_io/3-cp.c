@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
-		handle_error(99, "Error: Can't write to %s", argv[o], fd_from, fd_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 	}
 
 	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
