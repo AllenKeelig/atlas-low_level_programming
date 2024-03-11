@@ -2,6 +2,8 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <libgen.h>
+
 
 #define BUFFER_SIZE 1024
 
@@ -27,7 +29,7 @@ int main(int argc, char *argv[])
 	char buffer[BUFFER_SIZE];
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
