@@ -65,7 +65,7 @@ void closeFile(int fd)
 
 int main(int argc, char *argv[])
 {
-	int fd_from = openFile(argv[1], O_RDONLY);
+	int fd_from = openFile(argv[1], O_RDONLY, 0);
 	int fd_to = openFile(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	
 	if (argc != 3)
