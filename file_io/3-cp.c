@@ -44,15 +44,16 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 	}
-
-	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
+	else
 	{
-		bytes_written = write(fd_to, buffer, bytes_read);
-		if (bytes_written == -1)
+		while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 		{
-			handle_error(99, "Error: Can't write to file", fd_from, fd_to);
+			bytes_written = write(fd_to, buffer, bytes_read);
+			if (bytes_written == -1)
+			{
+				handle_error(99, "Error: Can't write to file", fd_from, fd_to);
+			}
 		}
-	}
 
 	if (bytes_read == -1)
 	{
