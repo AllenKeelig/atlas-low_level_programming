@@ -21,9 +21,9 @@ void handle_error(int code, const char *message, int fd1, int fd2)
 	dprintf(STDERR_FILENO, "%s\n", message);
 	exit(code);
 }
-int openFile(const char *filename, int flags)
+int openFile(const char *filename, int flags, mode_t mode)
 {
-	int fd = open(filename, flags);
+	int fd = open(filename, flags, mode);
 
 	if (fd == -1)
 	{
