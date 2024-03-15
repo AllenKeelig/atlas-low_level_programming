@@ -10,21 +10,27 @@
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *new = malloc(sizeof(dlistint_t));
+    dlistint_t *new_node = malloc(sizeof(dlistint_t));
+    if (new_node == NULL)
+    return NULL;  /* Memory allocation failed */
+    
+    new_node->n = n;
+    new_node->next = NULL;
+    
+    if (*head == NULL)
+    {
+        new_node->prev = NULL;
+        *head = new_node;  /* Set the new node as the head if the list is empty */
+    }
+    else
+    {
+        dlistint_t *last = *head;
+        while (last->next != NULL)
+            last = last->next;  /* Traverse the list to find the last node */
+        
+        last->next = new_node;
+        new_node->prev = last;
+    }
 
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = NULL;
-	if (*head == NULL)
-	{
-		new->prev = NULL;
-		*head = new;
-		return (new);
-	}
-	while ((*head)->next != NULL)
-		*head = (*head)->next;
-	(*head)->next = new;
-	new->prev = *head;
-	return (new);
+    return new_node;
 }
