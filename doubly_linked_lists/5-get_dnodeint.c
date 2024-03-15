@@ -9,7 +9,6 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	size_t len = 0;
 	unsigned int i = 0;
 
 	if (head == NULL)
