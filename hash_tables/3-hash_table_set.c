@@ -2,6 +2,14 @@
 #include <string.h>
 #include "hash_tables.h"
 
+/*
+ * hash_table_set - Adds an element to the hash table.
+ * @ht: The hash table to add or update the key/value pair.
+ * @key: The key string.
+ * @value: The value associated with the key.
+ *
+ */
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
