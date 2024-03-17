@@ -8,6 +8,11 @@
  * @key: The key string.
  * @value: The value associated with the key.
  *
+ * Description: This function adds or updates a key/value pair in the hash table.
+ * If the key already exists, the associated value is updated.
+ * If the key does not exist, a new node is created and added to the hash table.
+ * If memory allocation fails, or if the input parameters are invalid (e.g., NULL),
+ * the function returns 0. Otherwise, it returns 1 upon successful insertion/update.
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
