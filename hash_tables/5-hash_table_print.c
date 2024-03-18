@@ -7,13 +7,15 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
+    unsigned long int i;
+
 	if (ht == NULL)
 		return;
 
 	printf("{");
-	unsigned int first = 1;  // Flag to determine if it's the first element
+	unsigned int first = 1;
 
-	for (unsigned long int i = 0; i < ht->size; i++)
+	for (i = 0; i < ht->size; i++)
 	{
 		hash_node_t *node = ht->array[i];
 		while (node != NULL)
