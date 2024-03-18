@@ -7,8 +7,8 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-    unsigned long int i;
-    unsigned int first = 1;
+	unsigned long int i;
+	unsigned int first = 1;
 
 	if (ht == NULL)
 		return;
@@ -18,6 +18,7 @@ void hash_table_print(const hash_table_t *ht)
 	for (i = 0; i < ht->size; i++)
 	{
 		hash_node_t *node = ht->array[i];
+		
 		while (node != NULL)
 		{
 			if (!first)
