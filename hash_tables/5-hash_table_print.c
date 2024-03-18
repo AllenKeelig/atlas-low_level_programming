@@ -8,12 +8,12 @@
 void hash_table_print(const hash_table_t *ht)
 {
     unsigned long int i;
+    unsigned int first = 1;
 
 	if (ht == NULL)
 		return;
 
 	printf("{");
-	unsigned int first = 1;
 
 	for (i = 0; i < ht->size; i++)
 	{
